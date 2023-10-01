@@ -3,13 +3,13 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { auth } from '../firebase';
-import { Box, Heading, Input } from '@chakra-ui/react';
+import { Box, Button, Heading, Input, Text } from '@chakra-ui/react';
 
 export default function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordAgain, setPasswordAgain] = useState('');
-    const router=useRouter();
+    const router = useRouter();
 
     const signup = () => {
         createUserWithEmailAndPassword(auth, email, password);
@@ -18,7 +18,7 @@ export default function Signup() {
 
     return (
         <>
-            <Box boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px;' w={{ base: "100%", md: "70%", lg: "40%" }} m='auto' mt='100px' borderRadius='20px' p='30px 0 30px 0'>
+            <Box boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px;' w={{ base: "100%", md: "70%", lg: "40%" }} m='auto' mt='100px' borderRadius='20px' p='30px 0 30px 0' >
                 <Box textAlign='center'>
                     <Heading as='h3' size='lg'>
                         Sign up
@@ -86,6 +86,12 @@ export default function Signup() {
                                 Sign Up
                             </button>
                         </Box>
+                        <Text textAlign='center' mt='50px'>
+                            Already signed up?{' '}
+                            <Button onClick={() => router.push('signin')} >
+                                Sign In
+                            </Button>
+                        </Text>
                     </Box>
                 </Box>
             </Box>
