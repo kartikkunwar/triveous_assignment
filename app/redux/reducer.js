@@ -20,6 +20,11 @@ export const reducer=(state=initialState,action)=>{
                 ...state,
                 toggle:state.toggle+1
             }
+        case types.GET_SUCCESS_FAV:
+            return{
+                ...state,
+                favourite:[...state.favourite,payload]
+            }
         default:
             return state;
     }

@@ -15,3 +15,7 @@ export const getNews = (dispatch) => {
 export const changecount=(dispatch)=>{
     dispatch({type:types.GET_SUCCESS_TOGGLE})
 }
+
+export const addedtofav=(data)=>(dispatch)=>{
+    dispatch({type:types.GET_SUCCESS_FAV,payload:data})
+}

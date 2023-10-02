@@ -7,7 +7,6 @@ import {Navbar} from "../components/navbar"
 
 
 export default function News(){
-    // const [count,setCount]=useState(0)
     const dispatch=useDispatch()
    
 
@@ -18,7 +17,7 @@ export default function News(){
     return(
         <>
          <Navbar/>
-         <Listview/>
+         <Listview total={true}/>
         </>
     )
 }

@@ -1,3 +1,4 @@
+'use client'
 import { Box, Button } from "@chakra-ui/react"
 import Link from "next/link"
 import { useDispatch } from "react-redux"
@@ -13,6 +14,7 @@ export const Navbar=()=>{
             <Link href="/signup">Signup</Link>
             <Link href="/signin">Signin</Link>
             <Link href="/news">News</Link>
+            <Link href="/favourites">Fav news</Link>
             <Button onClick={()=>toggleitem()}>toggle</Button>
         </Box>
     )
