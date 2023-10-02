@@ -56,7 +56,7 @@ export default function Signin() {
 
             <Box w='90%' m='auto' mt='50px'>
               <button
-                onClick={() => signIn('credentials', { email, password, redirect: true, callbackUrl: '/' })}
+                onClick={() => signIn('credentials', { email, password, redirect: true, callbackUrl: '/news' })}
                 disabled={!email || !password}
                 className='button'
               >

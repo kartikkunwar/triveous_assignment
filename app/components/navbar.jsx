@@ -12,6 +12,7 @@ export const Navbar=()=>{
         <Box display='flex' justifyContent='space-around' alignItems='center' boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px;' p='20px 0 20px 0'>
             <Link href="/signup">Signup</Link>
             <Link href="/signin">Signin</Link>
+            <Link href="/news">News</Link>
             <Button onClick={()=>toggleitem()}>toggle</Button>
         </Box>
     )

@@ -1,6 +1,7 @@
 'use client'
 import { Box,Text,Heading} from "@chakra-ui/react";
 import { useSelector } from "react-redux";
+import { Navbar } from "../../components/navbar";
 
 
 
@@ -15,7 +16,9 @@ export default function SingleNews(props){
 
     
     return(
-        <Box w='80%' m='auto'>
+        <>
+        <Navbar/>
+        <Box w='80%' m='auto' mt='100px'>
             {
                 single!==undefined&&single.length&&
                 single.map((el,ind)=>{
@@ -31,5 +34,6 @@ export default function SingleNews(props){
                 })
             }
         </Box>
+        </>
     )
 }
